@@ -10,7 +10,7 @@ body {
 
 #links {
     width: 90%;
-    height: 40em;
+    height: auto;
     background-color: #44475A;
     color: #FF5555;
 }
@@ -20,6 +20,8 @@ textarea {
     font-weight: inherit;
     text-decoration: none;
     font-family: inherit;
+    border: none;
+    min-height: 40em;
 }
 
 textarea:focus {
@@ -36,7 +38,6 @@ textarea:focus {
 
 #textareadiv {
     width: 85%;
-    height: 100%;
 }
 
 #plaintext {

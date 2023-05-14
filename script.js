@@ -30,23 +30,28 @@ const convertLinks = (input) => {
     return output.join('');
 };
 
-const linksArea = document.getElementById('links');
-if (linksArea.addEventListener) {
-    linksArea.addEventListener('input', () => {
-        const typedTxt = linksArea.value;
-        document.getElementById('plaintxt').innerHTML = convertLinks(typedTxt);
-        localStorage.setItem('links', linksArea.value);
+const editTextArea = document.getElementById('links');
+const plainTextArea = document.getElementById('plaintxt');
+if (editTextArea.addEventListener) {
+    editTextArea.addEventListener('input', () => {
+        const typedTxt = editTextArea.value;
+        plainTextArea.innerHTML = convertLinks(typedTxt);
+        localStorage.setItem('links', editTextArea.value);
+        document.getElementById('links').style.height = '1px';
+        document.getElementById('links').style.height = `${25 + editTextArea.scrollHeight}px`;
     }, false);
-} else if (linksArea.attachEvent) {
-    linksArea.attachEvent('onpropertychange', () => {
-        const typedTxt = linksArea.value;
-        document.getElementById('plaintxt').innerHTML = convertLinks(typedTxt);
-        localStorage.setItem('links', linksArea.value);
+} else if (editTextArea.attachEvent) {
+    editTextArea.attachEvent('onpropertychange', () => {
+        const typedTxt = editTextArea.value;
+        plainTextArea.innerHTML = convertLinks(typedTxt);
+        localStorage.setItem('links', editTextArea.value);
     });
+    document.getElementById('links').style.height = '1px';
+    document.getElementById('links').style.height = `${25 + editTextArea.scrollHeight}px`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('plaintxt').innerHTML = convertLinks(localStorage.getItem('links'));
+    plainTextArea.innerHTML = convertLinks(localStorage.getItem('links'));
 });
 
-linksArea.value = localStorage.getItem('links');
+editTextArea.value = localStorage.getItem('links');
