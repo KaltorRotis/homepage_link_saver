@@ -15,6 +15,13 @@ body {
     color: #FF5555;
 }
 
+textarea {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    font-family: inherit;
+}
+
 textarea:focus {
     outline: none !important;
     border-color: #F1FA8C;
