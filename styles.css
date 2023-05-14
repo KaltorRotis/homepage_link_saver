@@ -21,15 +21,19 @@ textarea:focus {
     box-shadow: 0 0 10px #719ECE;
 }
 
+#boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #textareadiv {
-    float: right;
     width: 85%;
     height: 100%;
 }
 
 #plaintext {
     text-align: right;
-    float: left;
     width: 15%;
     height: 100%;
 }
