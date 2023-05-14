@@ -23,7 +23,7 @@ const convertLinks = (input) => {
                     output.push(`<a href="${replace}" target="_blank">${linkText}</a><br />`);
                 }
             } else {
-                output.push(`${line}<br />`);
+                output.push('<br />');
             }
         }
     }

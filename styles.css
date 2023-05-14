@@ -41,9 +41,12 @@ textarea:focus {
 }
 
 #plaintext {
-    text-align: right;
     width: 15%;
     height: 100%;
+}
+
+#plaintext text {
+    text-align: right !important;
 }
 
 a:link,
