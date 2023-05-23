@@ -1,8 +1,8 @@
 body {
     background-color: #282A36;
     color: #BD93F9;
-    font-family: 'Open Sans', sans-serif;
-    font-size: .9em;
+    font-family: 'FantasqueSansM Nerd Font', 'Open Sans', sans-serif;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -22,6 +22,7 @@ textarea {
     font-family: inherit;
     border: none;
     min-height: 40em;
+    overflow-right: auto;
 }
 
 textarea:focus {
